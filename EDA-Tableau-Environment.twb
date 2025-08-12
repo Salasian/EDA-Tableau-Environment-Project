@@ -1,0 +1,1418 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0514.2217                               -->
+<workbook original-version='18.1' source-build='2025.2.0 (20252.25.0514.2217)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Select Month' datatype='string' name='[Parámetro 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;November&quot;'>
+        <calculation class='tableau' formula='&quot;November&quot;' />
+        <members>
+          <member value='&quot;January&quot;' />
+          <member value='&quot;February&quot;' />
+          <member value='&quot;March&quot;' />
+          <member value='&quot;April&quot;' />
+          <member value='&quot;May&quot;' />
+          <member value='&quot;June&quot;' />
+          <member value='&quot;July&quot;' />
+          <member value='&quot;August&quot;' />
+          <member value='&quot;September&quot;' />
+          <member value='&quot;October&quot;' />
+          <member value='&quot;November&quot;' />
+          <member value='&quot;December&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='climate-change-data' inline='true' name='federated.0w99i9e1syw7941647km808qeg9t' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='climate-change-data' name='textscan.0986wpf1jfc34i1b3mfge1fdbpag'>
+            <connection class='textscan' directory='C:/Users/Ian Salas López/Desktop/Repositories/EDA-Fundamentals/data' filename='climate-change-data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0986wpf1jfc34i1b3mfge1fdbpag' name='climate-change-data.csv' table='[climate-change-data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='es_MX' separator=','>
+            <column datatype='string' name='Record ID' ordinal='0' />
+            <column datatype='date' name='Date' ordinal='1' />
+            <column datatype='string' name='Country' ordinal='2' />
+            <column datatype='string' name='City' ordinal='3' />
+            <column datatype='real' name='Temperature' ordinal='4' />
+            <column datatype='integer' name='Humidity' ordinal='5' />
+            <column datatype='real' name='Precipitation' ordinal='6' />
+            <column datatype='integer' name='Air Quality Index' ordinal='7' />
+            <column datatype='string' name='Extreme Weather Events' ordinal='8' />
+            <column datatype='string' name='Climate Classification' ordinal='9' />
+            <column datatype='string' name='Climate Zone' ordinal='10' />
+            <column datatype='string' name='Biome Type' ordinal='11' />
+            <column datatype='real' name='Heat Index' ordinal='12' />
+            <column datatype='real' name='Wind Speed' ordinal='13' />
+            <column datatype='string' name='Wind Direction' ordinal='14' />
+            <column datatype='string' name='Season' ordinal='15' />
+            <column datatype='integer' name='Population Exposure' ordinal='16' />
+            <column datatype='real' name='Economic Impact Estimate' ordinal='17' />
+            <column datatype='integer' name='Infrastructure Vulnerability Score' ordinal='18' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_MX&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Record ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Record ID]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Record ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Temperature</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Temperature]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Temperature</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Humidity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Humidity]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Humidity</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Precipitation</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Precipitation]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Precipitation</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Air Quality Index</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Air Quality Index]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Air Quality Index</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Extreme Weather Events</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Extreme Weather Events]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Extreme Weather Events</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Climate Classification</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Climate Classification]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Climate Classification</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Climate Zone</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Climate Zone]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Climate Zone</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Biome Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Biome Type]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Biome Type</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Heat Index</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Heat Index]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Heat Index</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Wind Speed</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Wind Speed]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Wind Speed</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Wind Direction</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Wind Direction]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Wind Direction</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Season</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Season]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Season</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Population Exposure</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Population Exposure]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Population Exposure</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Economic Impact Estimate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Economic Impact Estimate]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Economic Impact Estimate</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Infrastructure Vulnerability Score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Infrastructure Vulnerability Score]</local-name>
+            <parent-name>[climate-change-data.csv]</parent-name>
+            <remote-alias>Infrastructure Vulnerability Score</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Good Percentage EWE' datatype='string' name='[Bad Percentage EWE (copia)_1905022683917471749]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_1905022683914752003] &lt; 0 THEN &quot;▼ &quot; + STR(ROUND([Calculation_1905022683914752003] * 100,2)) + &quot;%&quot;&#13;&#10;ELSE &quot;&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Count of EWE' datatype='integer' name='[Calculation_1905022683911409664]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Extreme Weather Events] &lt;&gt; &quot;None&quot; THEN 1 ELSE 0 END' />
+      </column>
+      <column caption='Current Month EWE' datatype='integer' name='[Calculation_1905022683912019969]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF DATENAME(&apos;month&apos;, [Date]) = [Parameters].[Parámetro 1] THEN &#13;&#10;[Calculation_1905022683911409664] END' />
+      </column>
+      <column caption='Previous Month EWE' datatype='integer' name='[Calculation_1905022683913572354]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF DATENAME(&apos;month&apos;, [Date]) = &#13;&#10;CASE [Parameters].[Parámetro 1]&#13;&#10;    WHEN &apos;January&apos; THEN &apos;December&apos;&#13;&#10;    WHEN &apos;February&apos; THEN &apos;January&apos;&#13;&#10;    WHEN &apos;March&apos; THEN &apos;February&apos;&#13;&#10;    WHEN &apos;April&apos; THEN &apos;March&apos;&#13;&#10;    WHEN &apos;May&apos; THEN &apos;April&apos;&#13;&#10;    WHEN &apos;June&apos; THEN &apos;May&apos;&#13;&#10;    WHEN &apos;July&apos; THEN &apos;June&apos;&#13;&#10;    WHEN &apos;August&apos; THEN &apos;July&apos;&#13;&#10;    WHEN &apos;September&apos; THEN &apos;August&apos;&#13;&#10;    WHEN &apos;October&apos; THEN &apos;September&apos;&#13;&#10;    WHEN &apos;November&apos; THEN &apos;October&apos;&#13;&#10;    WHEN &apos;December&apos; THEN &apos;November&apos;&#13;&#10;    END&#13;&#10;THEN [Calculation_1905022683911409664]&#13;&#10;END' />
+      </column>
+      <column caption='% Difference EWE' datatype='real' name='[Calculation_1905022683914752003]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(SUM([Calculation_1905022683912019969]) - SUM([Calculation_1905022683913572354]))/ SUM([Calculation_1905022683913572354])' />
+      </column>
+      <column caption='Bad Percentage EWE' datatype='string' name='[Calculation_1905022683916193796]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_1905022683914752003] &gt; 0 THEN &quot;▲ &quot; + STR(ROUND([Calculation_1905022683914752003] * 100,2)) + &quot;%&quot;&#13;&#10;ELSE &quot;&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Current Month AQI' datatype='real' name='[Calculation_464152278138716160]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF DATENAME(&apos;month&apos;,[Date]) = [Parameters].[Parámetro 1] THEN&#13;&#10;{ FIXED DATENAME(&apos;month&apos;, [Date]) : AVG([Air Quality Index])}&#13;&#10;END' />
+      </column>
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='climate-change-data.csv' datatype='table' name='[__tableau_internal_object_id__].[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]' role='measure' type='quantitative' />
+      <drill-paths>
+        <drill-path name='Country, City'>
+          <field>[Country]</field>
+          <field>[City]</field>
+        </drill-path>
+      </drill-paths>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='es_ES' class='hyper' dbname='C:/Users/IANSAL~1/AppData/Local/Temp/TableauTemp/#TableauTemp_0n04cq40qcxsum16n1xqn05giff2.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/12/2025 03:47:24 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Record ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Record ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Record ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15351</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1312</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>2</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>City</remote-alias>
+              <ordinal>3</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Temperature</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Temperature]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Temperature</remote-alias>
+              <ordinal>4</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>932</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Humidity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Humidity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Humidity</remote-alias>
+              <ordinal>5</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>91</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Precipitation</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Precipitation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Precipitation</remote-alias>
+              <ordinal>6</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2835</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Air Quality Index</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Air Quality Index]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Air Quality Index</remote-alias>
+              <ordinal>7</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>825</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Extreme Weather Events</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Extreme Weather Events]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Extreme Weather Events</remote-alias>
+              <ordinal>8</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Climate Classification</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Climate Classification]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Climate Classification</remote-alias>
+              <ordinal>9</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Climate Zone</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Climate Zone]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Climate Zone</remote-alias>
+              <ordinal>10</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Biome Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Biome Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Biome Type</remote-alias>
+              <ordinal>11</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Heat Index</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Heat Index]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Heat Index</remote-alias>
+              <ordinal>12</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>974</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Wind Speed</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Wind Speed]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Wind Speed</remote-alias>
+              <ordinal>13</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>539</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Wind Direction</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Wind Direction]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Wind Direction</remote-alias>
+              <ordinal>14</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Season</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Season]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Season</remote-alias>
+              <ordinal>15</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Population Exposure</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Population Exposure]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Population Exposure</remote-alias>
+              <ordinal>16</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15351</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Economic Impact Estimate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Economic Impact Estimate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Economic Impact Estimate</remote-alias>
+              <ordinal>17</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15351</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Infrastructure Vulnerability Score</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Infrastructure Vulnerability Score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Infrastructure Vulnerability Score</remote-alias>
+              <ordinal>18</ordinal>
+              <family>climate-change-data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Estados Unidos Mexicanos&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Select Month' datatype='string' name='[Parámetro 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;November&quot;'>
+          <calculation class='tableau' formula='&quot;November&quot;' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='climate-change-data.csv' id='climate-change-data.csv_08784C9677BD4D349EBDC0CC135158AF'>
+            <properties context=''>
+              <relation connection='textscan.0986wpf1jfc34i1b3mfge1fdbpag' name='climate-change-data.csv' table='[climate-change-data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='es_MX' separator=','>
+                  <column datatype='string' name='Record ID' ordinal='0' />
+                  <column datatype='date' name='Date' ordinal='1' />
+                  <column datatype='string' name='Country' ordinal='2' />
+                  <column datatype='string' name='City' ordinal='3' />
+                  <column datatype='real' name='Temperature' ordinal='4' />
+                  <column datatype='integer' name='Humidity' ordinal='5' />
+                  <column datatype='real' name='Precipitation' ordinal='6' />
+                  <column datatype='integer' name='Air Quality Index' ordinal='7' />
+                  <column datatype='string' name='Extreme Weather Events' ordinal='8' />
+                  <column datatype='string' name='Climate Classification' ordinal='9' />
+                  <column datatype='string' name='Climate Zone' ordinal='10' />
+                  <column datatype='string' name='Biome Type' ordinal='11' />
+                  <column datatype='real' name='Heat Index' ordinal='12' />
+                  <column datatype='real' name='Wind Speed' ordinal='13' />
+                  <column datatype='string' name='Wind Direction' ordinal='14' />
+                  <column datatype='string' name='Season' ordinal='15' />
+                  <column datatype='integer' name='Population Exposure' ordinal='16' />
+                  <column datatype='real' name='Economic Impact Estimate' ordinal='17' />
+                  <column datatype='integer' name='Infrastructure Vulnerability Score' ordinal='18' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='EWE'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='climate-change-data' name='federated.0w99i9e1syw7941647km808qeg9t' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Month' datatype='string' name='[Parámetro 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;November&quot;'>
+              <calculation class='tableau' formula='&quot;November&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0w99i9e1syw7941647km808qeg9t'>
+            <column caption='Good Percentage EWE' datatype='string' name='[Bad Percentage EWE (copia)_1905022683917471749]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_1905022683914752003] &lt; 0 THEN &quot;▼ &quot; + STR(ROUND([Calculation_1905022683914752003] * 100,2)) + &quot;%&quot;&#13;&#10;ELSE &quot;&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Count of EWE' datatype='integer' name='[Calculation_1905022683911409664]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Extreme Weather Events] &lt;&gt; &quot;None&quot; THEN 1 ELSE 0 END' />
+            </column>
+            <column caption='Current Month EWE' datatype='integer' name='[Calculation_1905022683912019969]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF DATENAME(&apos;month&apos;, [Date]) = [Parameters].[Parámetro 1] THEN &#13;&#10;[Calculation_1905022683911409664] END' />
+            </column>
+            <column caption='Previous Month EWE' datatype='integer' name='[Calculation_1905022683913572354]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF DATENAME(&apos;month&apos;, [Date]) = &#13;&#10;CASE [Parameters].[Parámetro 1]&#13;&#10;    WHEN &apos;January&apos; THEN &apos;December&apos;&#13;&#10;    WHEN &apos;February&apos; THEN &apos;January&apos;&#13;&#10;    WHEN &apos;March&apos; THEN &apos;February&apos;&#13;&#10;    WHEN &apos;April&apos; THEN &apos;March&apos;&#13;&#10;    WHEN &apos;May&apos; THEN &apos;April&apos;&#13;&#10;    WHEN &apos;June&apos; THEN &apos;May&apos;&#13;&#10;    WHEN &apos;July&apos; THEN &apos;June&apos;&#13;&#10;    WHEN &apos;August&apos; THEN &apos;July&apos;&#13;&#10;    WHEN &apos;September&apos; THEN &apos;August&apos;&#13;&#10;    WHEN &apos;October&apos; THEN &apos;September&apos;&#13;&#10;    WHEN &apos;November&apos; THEN &apos;October&apos;&#13;&#10;    WHEN &apos;December&apos; THEN &apos;November&apos;&#13;&#10;    END&#13;&#10;THEN [Calculation_1905022683911409664]&#13;&#10;END' />
+            </column>
+            <column caption='% Difference EWE' datatype='real' name='[Calculation_1905022683914752003]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(SUM([Calculation_1905022683912019969]) - SUM([Calculation_1905022683913572354]))/ SUM([Calculation_1905022683913572354])' />
+            </column>
+            <column caption='Bad Percentage EWE' datatype='string' name='[Calculation_1905022683916193796]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_1905022683914752003] &gt; 0 THEN &quot;▲ &quot; + STR(ROUND([Calculation_1905022683914752003] * 100,2)) + &quot;%&quot;&#13;&#10;ELSE &quot;&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Extreme Weather Events]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1905022683912019969]' derivation='Sum' name='[sum:Calculation_1905022683912019969:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Bad Percentage EWE (copia)_1905022683917471749]' derivation='User' name='[usr:Bad Percentage EWE (copia)_1905022683917471749:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1905022683916193796]' derivation='User' name='[usr:Calculation_1905022683916193796:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0w99i9e1syw7941647km808qeg9t].[usr:Bad Percentage EWE (copia)_1905022683917471749:nk]'>
+            <groupfilter function='level-members' level='[usr:Bad Percentage EWE (copia)_1905022683917471749:nk]' />
+          </filter>
+          <slices>
+            <column>[federated.0w99i9e1syw7941647km808qeg9t].[usr:Bad Percentage EWE (copia)_1905022683917471749:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0w99i9e1syw7941647km808qeg9t].[sum:Calculation_1905022683912019969:qk]' />
+              <text column='[federated.0w99i9e1syw7941647km808qeg9t].[usr:Calculation_1905022683916193796:nk]' />
+              <text column='[federated.0w99i9e1syw7941647km808qeg9t].[usr:Bad Percentage EWE (copia)_1905022683917471749:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontname='Tableau Semibold' fontsize='12'>Extreme Weather Events</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#f9a655' fontsize='24'><![CDATA[<[federated.0w99i9e1syw7941647km808qeg9t].[sum:Calculation_1905022683912019969:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#e15759' fontname='Tableau Semibold' fontsize='10'><![CDATA[<[federated.0w99i9e1syw7941647km808qeg9t].[usr:Calculation_1905022683916193796:nk]>]]></run>
+                <run fontcolor='#59a14f' fontname='Tableau Semibold' fontsize='10'><![CDATA[<[federated.0w99i9e1syw7941647km808qeg9t].[usr:Bad Percentage EWE (copia)_1905022683917471749:nk]> ]]></run>
+                <run fontname='Tableau Semibold' fontsize='10'>vs. last month</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{6DD77233-799F-4BBB-B2ED-BF6DADF3A40A}' />
+    </worksheet>
+    <worksheet name='Hoja 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='climate-change-data' name='federated.0w99i9e1syw7941647km808qeg9t' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Month' datatype='string' name='[Parámetro 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;November&quot;'>
+              <calculation class='tableau' formula='&quot;November&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0w99i9e1syw7941647km808qeg9t'>
+            <column caption='Count of EWE' datatype='integer' name='[Calculation_1905022683911409664]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Extreme Weather Events] &lt;&gt; &quot;None&quot; THEN 1 ELSE 0 END' />
+            </column>
+            <column caption='Current Month EWE' datatype='integer' name='[Calculation_1905022683912019969]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF DATENAME(&apos;month&apos;, [Date]) = [Parameters].[Parámetro 1] THEN &#13;&#10;[Calculation_1905022683911409664] END' />
+            </column>
+            <column caption='Previous Month EWE' datatype='integer' name='[Calculation_1905022683913572354]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF DATENAME(&apos;month&apos;, [Date]) = &#13;&#10;CASE [Parameters].[Parámetro 1]&#13;&#10;    WHEN &apos;January&apos; THEN &apos;December&apos;&#13;&#10;    WHEN &apos;February&apos; THEN &apos;January&apos;&#13;&#10;    WHEN &apos;March&apos; THEN &apos;February&apos;&#13;&#10;    WHEN &apos;April&apos; THEN &apos;March&apos;&#13;&#10;    WHEN &apos;May&apos; THEN &apos;April&apos;&#13;&#10;    WHEN &apos;June&apos; THEN &apos;May&apos;&#13;&#10;    WHEN &apos;July&apos; THEN &apos;June&apos;&#13;&#10;    WHEN &apos;August&apos; THEN &apos;July&apos;&#13;&#10;    WHEN &apos;September&apos; THEN &apos;August&apos;&#13;&#10;    WHEN &apos;October&apos; THEN &apos;September&apos;&#13;&#10;    WHEN &apos;November&apos; THEN &apos;October&apos;&#13;&#10;    WHEN &apos;December&apos; THEN &apos;November&apos;&#13;&#10;    END&#13;&#10;THEN [Calculation_1905022683911409664]&#13;&#10;END' />
+            </column>
+            <column caption='% Difference EWE' datatype='real' name='[Calculation_1905022683914752003]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(SUM([Calculation_1905022683912019969]) - SUM([Calculation_1905022683913572354]))/ SUM([Calculation_1905022683913572354])' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Extreme Weather Events]' role='dimension' type='nominal' />
+            <column-instance column='[Date]' derivation='Month' name='[mn:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1905022683911409664]' derivation='Sum' name='[sum:Calculation_1905022683911409664:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1905022683912019969]' derivation='Sum' name='[sum:Calculation_1905022683912019969:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1905022683913572354]' derivation='Sum' name='[sum:Calculation_1905022683913572354:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1905022683914752003]' derivation='User' name='[usr:Calculation_1905022683914752003:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0w99i9e1syw7941647km808qeg9t].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0w99i9e1syw7941647km808qeg9t].[sum:Calculation_1905022683911409664:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0w99i9e1syw7941647km808qeg9t].[sum:Calculation_1905022683912019969:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0w99i9e1syw7941647km808qeg9t].[sum:Calculation_1905022683913572354:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0w99i9e1syw7941647km808qeg9t].[usr:Calculation_1905022683914752003:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0w99i9e1syw7941647km808qeg9t].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0w99i9e1syw7941647km808qeg9t].[sum:Calculation_1905022683911409664:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0w99i9e1syw7941647km808qeg9t].[sum:Calculation_1905022683912019969:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0w99i9e1syw7941647km808qeg9t].[sum:Calculation_1905022683913572354:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0w99i9e1syw7941647km808qeg9t].[usr:Calculation_1905022683914752003:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0w99i9e1syw7941647km808qeg9t].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0w99i9e1syw7941647km808qeg9t].[:Measure Names]' value='66' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0w99i9e1syw7941647km808qeg9t].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0w99i9e1syw7941647km808qeg9t].[mn:Date:ok]</rows>
+        <cols>[federated.0w99i9e1syw7941647km808qeg9t].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{AF153658-566C-4FCF-AEC0-53F824CF0551}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='climate-change-data' name='federated.0w99i9e1syw7941647km808qeg9t' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Month' datatype='string' name='[Parámetro 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;November&quot;'>
+              <calculation class='tableau' formula='&quot;November&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0w99i9e1syw7941647km808qeg9t'>
+            <column datatype='integer' name='[Air Quality Index]' role='measure' type='quantitative' />
+            <column caption='Current Month AQI' datatype='real' name='[Calculation_464152278138716160]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF DATENAME(&apos;month&apos;,[Date]) = [Parameters].[Parámetro 1] THEN&#13;&#10;{ FIXED DATENAME(&apos;month&apos;, [Date]) : AVG([Air Quality Index])}&#13;&#10;END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Air Quality Index]' derivation='Avg' name='[avg:Air Quality Index:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_464152278138716160]' derivation='Avg' name='[avg:Calculation_464152278138716160:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Month' name='[mn:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0w99i9e1syw7941647km808qeg9t].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0w99i9e1syw7941647km808qeg9t].[avg:Air Quality Index:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0w99i9e1syw7941647km808qeg9t].[avg:Calculation_464152278138716160:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0w99i9e1syw7941647km808qeg9t].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0w99i9e1syw7941647km808qeg9t].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0w99i9e1syw7941647km808qeg9t].[mn:Date:ok]</rows>
+        <cols>[federated.0w99i9e1syw7941647km808qeg9t].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{0C836FC4-BF3A-44E0-82D3-00538281E6DA}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Hoja 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parámetro 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{09D560BA-71E4-4F93-84BD-54CFC1CE42CC}' />
+    </window>
+    <window class='worksheet' name='EWE'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parámetro 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{F40491F3-88EE-4E55-9BA3-1300E0C7F56A}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parámetro 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0w99i9e1syw7941647km808qeg9t].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{AA34D3A2-7B75-4FE5-8152-3D36FBAF54A0}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='EWE' width='192'>
+      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
+      RK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 3' width='192'>
+      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
+      HWQF340AAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
