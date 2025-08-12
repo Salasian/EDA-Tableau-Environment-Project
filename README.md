@@ -1,2 +1,2 @@
-# EDA-Fundamentals
-This projects goals is to understand, find and create visualizations based on data for different types of datasets and topics to create a solid foundation on Exploratory Data Analysis. Using matplotlib, pandas and seaborn to handle data an visualizations.
+# Introduction
+This project's purpose is to analyze the climate and environment values of different countries by the gathering of a data and transforming it to make usable graphics that can lead to conclusions.
